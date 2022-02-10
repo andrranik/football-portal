@@ -1,0 +1,185 @@
+.grid {
+    display: grid;
+    grid-template-columns: 248px auto 250px;
+    grid-template-rows: 50px 448px auto 50px;
+    grid-template-areas: 
+        "header  header header"
+        "banner banner banner"
+        "sidebar main news"
+        "footer footer footer"
+    ;
+    row-gap: 10px;
+    column-gap: 10px;
+    max-width: 1920px;
+}
+
+@media screen and (max-width: 900px) {
+    .grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 60px 448px 100px, auto 150px;
+        grid-template-areas: 
+            "header"
+            "banner"
+            "sidebar"
+            "main"
+            "news"
+            "footer"
+        ;
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+
+    /*#region MEDIA SIDEBAR*/
+    .sidebar-item {
+        margin-right: 0.5rem;
+    }
+    /*#endregion*/
+    
+    /*#region MEDIA SIDEBAR*/
+    .main-item {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    /*#endregion*/
+
+    /*#region MEDIA NEWS*/
+    .news-item {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    /*#endregion*/
+    /*#region MEDIA SIDEBAR*/
+    /*#endregion*/
+}
+
+.cell {
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 5px;
+    /* padding: 0.5rem; */
+}
+
+/*#region HEADER*/
+.header-item {
+    grid-area: header;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.header-logo {
+    background-color: #646456;
+    height: 100%;
+}
+
+.header-logo h1 {
+    cursor: pointer;
+}
+
+.header-buttons {
+    background-color: #d81d8a;
+    height: 100%;
+}
+/*#endregion */
+
+/*#region BANNER*/
+.banner-item {
+    grid-area: banner;
+    background-color: blueviolet;
+    background-image: url("https://metaratings.ru/upload/iblock/034/034ecafe2094b9c64caabd3f9d7c543f.jpg");
+    background-size: cover;
+    background-position: center center;
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.banner-content {
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    max-width: 40%;
+}
+
+.banner-content h1 {
+    white-space: nowrap;
+}
+/*#endregion */
+
+/*#region SIDEBAR*/
+.sidebar-item {
+    grid-area: sidebar;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 0.5rem;
+}
+
+.game-count {
+    background-color: tomato;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    padding-top: 0.5rem;
+    margin-top: 0.4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.team-icon img {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-icon h2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*#endregion*/
+
+/*#region MAIN*/
+.main-item {
+    grid-area: main;
+    background-color: darkgreen;
+}
+/*#endregion*/
+
+.news-item {
+    grid-area: news;
+    background-color: #524146;
+    margin-right: 0.5rem;
+}
+
+.block-header {
+    font-size: 1.2rem;
+}
+
+.see-more {
+    margin-left: auto;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.news-card {
+    
+}
+
+.footer-item {
+    grid-area: footer;
+    background-color: darkslateblue;
+}
+
